@@ -203,9 +203,25 @@ console.log(SonDegerlendirmeyiAl(degerlendirmeler));
 	]
 */
 
-function PuanaGoreDegerlendirmeAl(/* Kodlar buraya */) {
-  /* Kodlar buraya */
+function PuanaGoreDegerlendirmeAl(x, y) {
+  const filtrelenenx = [];
+
+  for (let i = 0; i < x.length; i++) {
+    const deger = x[i];
+
+    if (deger.puan >= y && deger.puan < y + 1) {
+      filtrelenenx.push(deger);
+    }
+  }
+
+  return filtrelenenx;
 }
+
+const puanAraligiDegerlendirmeler = PuanaGoreDegerlendirmeAl(
+  degerlendirmeler,
+  3
+);
+console.log(puanAraligiDegerlendirmeler);
 
 /*  BONUS 2:    
 	UzunDegerlendirmeleriAl fonksiyonuna aşağıdakileri uygulayın:
