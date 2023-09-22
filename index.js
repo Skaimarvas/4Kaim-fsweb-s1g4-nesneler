@@ -162,10 +162,10 @@ console.log(
 */
 
 function AnahtardanDegerlendirmeAl(liste, i) {
-  return `${degerlendirmeler[i].isim} isimli kişi ${degerlendirmeler[i].puan} puan verdi ve şunları yazdı: ${degerlendirmeler[i].geribildirim}`;
+  return `${liste[i].isim} isimli kişi ${liste[i].puan} puan verdi ve şunları yazdı: ${liste[i].geribildirim}`;
 }
 
-console.log(AnahtardanDegerlendirmeAl(degerlendirmeler, 2));
+console.log("Görev 6", AnahtardanDegerlendirmeAl(degerlendirmeler, 2));
 
 /*  Görev 7:  
 	Diziden en son değerlendirmeyi döndüren adı `SonDegerlendirmeyiAl` olan bir fonksiyon yazın 
@@ -230,9 +230,18 @@ console.log(puanAraligiDegerlendirmeler);
 	
 */
 
-function UzunDegerlendirmeleriAl(/* Kodlar buraya */) {
-  /* Kodlar buraya */
+function UzunDegerlendirmeleriAl(dizi) {
+  const onbesli = [];
+  for (let i = 0; i < dizi.length; i++) {
+    const xrp = dizi[i];
+    if (xrp.geribildirim.split(" ").length > 15) {
+      onbesli.push(xrp);
+    }
+  }
+  return onbesli;
 }
+
+console.log(UzunDegerlendirmeleriAl(degerlendirmeler));
 
 /*  BONUS 3:  
 	Bu ek görevde degerlendirmeler dizisi kullanılmayacak!  Bu görevde kendi nesnenizi yaratmanız gerekmektedir.
@@ -251,7 +260,7 @@ function UzunDegerlendirmeleriAl(/* Kodlar buraya */) {
 	Bu 110 döndürmelidir çünkü başlangıç kilometre sayacını 10 olarak tanımladık ve 100 km arabayı sürdük.
 */
 
-function arabaYapici(/* Kodlar buraya */) {
+function arabaYapici(km, sayac) {
   /* Kodlar buraya */
 }
 
