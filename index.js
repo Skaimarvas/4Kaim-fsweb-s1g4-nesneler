@@ -260,9 +260,18 @@ console.log(UzunDegerlendirmeleriAl(degerlendirmeler));
 	Bu 110 döndürmelidir çünkü başlangıç kilometre sayacını 10 olarak tanımladık ve 100 km arabayı sürdük.
 */
 
-function arabaYapici(km, sayac) {
-  /* Kodlar buraya */
+function arabaYapici(arabaSayac) {
+  let araba1 = {
+    km: 10,
+    sayac: 0,
+  };
+  araba1.sayac = arabaSayac;
+  araba1.km = araba1.km + arabaSayac;
+
+  return araba1;
 }
+
+console.log("Bonus 3: Km sayac", arabaYapici(500));
 
 /*  Buradan aşağıdaki kodları değiştirmeyin lütfen */
 function sa() {
